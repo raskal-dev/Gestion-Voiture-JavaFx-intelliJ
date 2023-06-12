@@ -11,8 +11,14 @@
     -fx-border-radius: 25px;
 }
 
-.count_pane{
+.count_pane_voiture{
     -fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+
+.count_pane_prix{
+    -fx-background-color: linear-gradient(to right top, rgba(39, 94, 17, 0.63), rgba(26, 138, 112, 0.63), rgba(15, 29, 197, 0.63), rgba(218, 18, 72, 0.63), #a8eb12);
     -fx-background-radius: 25px;
     -fx-border-radius: 25px;
 }

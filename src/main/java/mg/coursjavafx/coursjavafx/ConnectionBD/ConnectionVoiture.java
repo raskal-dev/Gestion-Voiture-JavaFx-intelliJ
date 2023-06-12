@@ -10,10 +10,10 @@ public class ConnectionVoiture {
         int resVoiture = 0;
         try{
             Connection con = ConnectionBD.connect();
-            String sql = "INSERT INTO voitures(matricule, marque_id, nbplace, prix) VALUES (?,?,?,?)";
+            String sql = "INSERT INTO voitures(matricule, marque, nbplace, prix) VALUES (?,?,?,?)";
             PreparedStatement voituresps = con.prepareStatement(sql);
             voituresps.setString(1, voitures.getMatricule());
-            voituresps.setInt(2, voitures.getMarque_id());
+            voituresps.setString(2, voitures.getMarque());
             voituresps.setInt(3, voitures.getNbplace());
             voituresps.setDouble(4, voitures.getPrix());
             resVoiture = voituresps.executeUpdate();
