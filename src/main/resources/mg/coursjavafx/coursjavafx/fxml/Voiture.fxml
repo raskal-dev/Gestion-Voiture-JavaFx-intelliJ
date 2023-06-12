@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="voiturepane" prefHeight="546.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mg.coursjavafx.coursjavafx.Controllers.Views.VoitureController">
+   <children>
+      <Pane layoutX="525.0" layoutY="17.0" prefHeight="130.0" prefWidth="213.0" styleClass="count_pane">
+         <children>
+            <Text layoutX="41.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOITURES" textAlignment="CENTER">
+               <font>
+                  <Font name="Noto Traditional Nushu Bold" size="23.0" />
+               </font>
+            </Text>
+            <Text fx:id="lbl_count_voiture" fill="#000000a2" layoutX="56.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="34" textAlignment="CENTER" wrappingWidth="101.0810546875">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <TextField fx:id="txtMarque" layoutX="77.0" layoutY="187.0" />
+      <TextField fx:id="txtNdplace" layoutX="266.0" layoutY="187.0" />
+      <TextField fx:id="txtPrix" layoutX="448.0" layoutY="187.0" />
+      <Pane layoutX="22.0" layoutY="14.0" prefHeight="136.0" prefWidth="482.0" styleClass="chart_pane">
+         <children>
+            <BarChart fx:id="chart_voiture" layoutY="1.0" prefHeight="131.0" prefWidth="479.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </Pane>
+      <Text fill="#000000bb" layoutX="77.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MARQUE" textAlignment="CENTER" wrappingWidth="171.0">
+         <font>
+            <Font name="Noto Sans Condensed Bold Nerd Font Complete" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#000000bb" layoutX="266.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NB PLACE" textAlignment="CENTER" wrappingWidth="171.0">
+         <font>
+            <Font name="Noto Sans Condensed Bold Nerd Font Complete" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#000000bb" layoutX="447.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRIX" textAlignment="CENTER" wrappingWidth="171.0">
+         <font>
+            <Font name="Noto Sans Condensed Bold Nerd Font Complete" size="20.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tb_voiture" layoutX="22.0" layoutY="223.0" prefHeight="200.0" prefWidth="673.0">
+        <columns>
+          <TableColumn fx:id="id_column" prefWidth="56.0" text="#" />
+          <TableColumn fx:id="marticule_column" prefWidth="198.0" text="Matricule" />
+            <TableColumn fx:id="marque_column" prefWidth="231.0" text="Marque" />
+            <TableColumn fx:id="nbplace_column" prefWidth="69.0" text="NB Place" />
+            <TableColumn fx:id="prix_column" prefWidth="117.0" text="Prix" />
+        </columns>
+      </TableView>
+      <FontAwesomeIcon fx:id="btn_add_voiture" glyphName="PLUS_SQUARE" layoutX="632.0" layoutY="206.0" onMouseClicked="#abbVoitureClicked" size="1.5em" styleClass="btn-default" />
+   </children>
+   <stylesheets>
+      <URL value="@../style/voiture.css" />
+      <URL value="@../style/bootstrap/bootstrapfx.css" />
+   </stylesheets>
+</AnchorPane>

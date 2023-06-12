@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1024.0" styleClass="panelprincipal" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mg.coursjavafx.coursjavafx.Controllers.Views.PrincipalController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="8.0" layoutY="54.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="254.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="770.0" AnchorPane.topAnchor="54.0">
+         <children>
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="250.0" text="Main">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <HBox fx:id="hb_home" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#homeClicked" prefHeight="45.0" prefWidth="250.0" styleClass="sidebar-btn">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <FontAwesomeIcon glyphName="HOME" />
+                  <Label text="HOME">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="hb_voiture" alignment="CENTER_LEFT" layoutX="10.0" layoutY="156.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#voitureClicked" prefHeight="45.0" prefWidth="250.0" styleClass="sidebar-btn">
+               <children>
+                  <FontAwesomeIcon glyphName="CAR" />
+                  <Label fx:id="lbl_voiture" text="VOITURE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="hb_commande" alignment="CENTER_LEFT" layoutX="10.0" layoutY="156.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#commandeClicked" prefHeight="45.0" prefWidth="250.0" styleClass="sidebar-btn">
+               <children>
+                  <FontAwesomeIcon glyphName="SHOPPING_CART" />
+                  <Label fx:id="lbl_commande" text="COMMANDE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="hb_statistique" alignment="CENTER_LEFT" layoutX="10.0" layoutY="201.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#statistiqueClicked" prefHeight="45.0" prefWidth="250.0" styleClass="sidebar-btn">
+               <children>
+                  <FontAwesomeIcon glyphName="BAR_CHART" />
+                  <Label fx:id="lbl_statistique" text="STATISTIQUE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <stylesheets>
+            <URL value="@../style/principal.css" />
+            <URL value="@../style/bootstrap/bootstrapfx.css" />
+         </stylesheets>
+      </VBox>
+      <AnchorPane fx:id="rootPane" layoutX="263.0" layoutY="54.0" prefHeight="546.0" prefWidth="761.0" styleClass="body_pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="263.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="54.0" />
+      <AnchorPane layoutX="7.0" layoutY="4.0" prefHeight="47.0" prefWidth="1016.0" styleClass="nav_bar_top" AnchorPane.bottomAnchor="549.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0">
+         <children>
+            <ImageView fitHeight="54.0" fitWidth="44.0" layoutX="29.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" styleClass="img_logo">
+               <image>
+                  <Image url="@../img/logocar.jpg" />
+               </image>
+            </ImageView>
+            <FontAwesomeIcon glyphName="POWER_OFF" layoutX="982.0" layoutY="35.0" size="2.5em" />
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../style/principal.css" />
+      <URL value="@../style/bootstrap/bootstrapfx.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,37 @@
+.boxleft {
+    -fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    -fx-border-radius: 40px;
+}
+
+.circlemidle {
+    -fx-background-color: rgba(124, 121, 234, 0.24);
+}
+
+.boxright {
+    -fx-background-color: #ffffff;
+}
+
+.btnred {
+    -fx-background-color: red;
+}
+
+.btnred:hover {
+    -fx-background-color: rgba(255, 0, 0, 0.75);
+}
+
+.btngreen {
+    -fx-background-color: green;
+}
+
+.btngreen:hover {
+    -fx-background-color: rgba(0, 128, 0, 0.77);
+}
+
+.btnblue {
+    -fx-background-color: #7c79ea;
+}
+
+.btnblue:hover {
+    -fx-background-color: rgba(124, 121, 234, 0.83);
+}
+
