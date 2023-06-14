@@ -1,7 +1,6 @@
 package mg.coursjavafx.coursjavafx.Controllers.Views;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -22,7 +21,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Random;
 import java.util.ResourceBundle;
 
 public class VoitureController implements Initializable {
@@ -72,10 +70,8 @@ public class VoitureController implements Initializable {
 
     @FXML
     void abbVoitureClicked(MouseEvent event) {
-        FoncionController numrondom = new FoncionController();
-        String matriculerondom = numrondom.genererNumero(6);
 
-        String matricule = matriculerondom;
+        String matricule = FoncionController.genererNumero(6);
         String marque = comboMarque.getValue();
         int nbplace = Integer.parseInt(txtNdplace.getText());
         double prix = Double.parseDouble(txtPrix.getText());
@@ -86,7 +82,7 @@ public class VoitureController implements Initializable {
         v.setNbplace(nbplace);
         v.setPrix(prix);
 
-        int status = ConnectionVoiture.create(v);
+        int status = ConnectionVoiture.createVoiture(v);
 
         if (status > 0) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

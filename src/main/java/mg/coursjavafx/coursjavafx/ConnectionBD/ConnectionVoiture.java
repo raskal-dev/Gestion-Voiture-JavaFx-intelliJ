@@ -6,11 +6,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 public class ConnectionVoiture {
-    public static int create(Voitures voitures) {
+    public static int createVoiture(Voitures voitures) {
         int resVoiture = 0;
         try{
             Connection con = ConnectionBD.connect();
             String sql = "INSERT INTO voitures(matricule, marque, nbplace, prix) VALUES (?,?,?,?)";
+            assert con != null;
             PreparedStatement voituresps = con.prepareStatement(sql);
             voituresps.setString(1, voitures.getMatricule());
             voituresps.setString(2, voitures.getMarque());
